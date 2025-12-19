@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>AfroRoteiros — Modo Pesquisador</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --preto: #0f0f0f;
+  --verde: #3E4A1F;
+  --laranja: #E87722;
+  --cinza: #f5f5f3;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cinza);
+}
+
+header {
+  padding: 60px 30px 40px;
+  background: white;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: normal;
+  color: var(--verde);
+  margin-bottom: 16px;
+}
+
+header p {
+  max-width: 760px;
+  margin: auto;
+  font-size: 1.15em;
+  line-height: 1.15;
+}
+
+.main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-weight: normal;
+  color: var(--verde);
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 16px;
+}
+
+button {
+  padding: 12px 22px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  background: var(--laranja);
+  color: white;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--laranja);
+  border: 2px solid var(--laranja);
+  margin-top: 30px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Modo Pesquisador/a</h1>
+  <p>
+    O AfroRoteiros organiza diferentes tipos de fontes
+    para leitura crítica do território, da memória
+    e da produção intelectual afro-brasileira.
+    <br>
+    Como você deseja iniciar sua pesquisa?
+  </p>
+</header>
+
+<section class="main">
+
+  <!-- TERRITÓRIO -->
+  <div class="card">
+    <h3>🗺 Território (Mapa)</h3>
+    <p>
+      Utilize o território como documento.
+      Explore camadas espaciais, pontos históricos
+      e narrativas georreferenciadas.
+    </p>
+    <button onclick="abrirMapa()">Acessar o mapa</button>
+  </div>
+
+  <!-- HIPERTEXTOS -->
+  <div class="card">
+    <h3>🔗 Hipertextos</h3>
+    <p>
+      Documentos constituídos por textos, vídeos,
+      áudios, recortes históricos e bibliografia
+      organizada por tema.
+    </p>
+    <input type="text" placeholder="Buscar por tema, autor ou palavra-chave">
+    <button onclick="abrirHipertextos()">Pesquisar hipertextos</button>
+  </div>
+
+  <!-- BIBLIOTECA -->
+  <div class="card">
+    <h3>📚 Biblioteca Virtual</h3>
+    <p>
+      Inventário de pesquisas, artigos científicos,
+      dissertações, teses e outras publicações
+      acadêmicas sobre a temática.
+    </p>
+    <input type="text" placeholder="Buscar por autor, título ou área">
+    <button onclick="abrirBiblioteca()">Pesquisar biblioteca</button>
+  </div>
+
+</section>
+
+<div class="actions">
+  <button class="secondary" onclick="voltar()">Voltar às Entradas</button>
+</div>
+
+<script>
+function abrirMapa() {
+  window.location.href = "Afro Roteiros Mapa Campos dos Goytacazes.html";
+}
+
+function abrirHipertextos() {
+  window.location.href = "hipertextos.html";
+}
+
+function abrirBiblioteca() {
+  window.location.href = "biblioteca.html";
+}
+
+function voltar() {
+  window.location.href = "entrada_afroroteiros.html";
+}
+</script>
+
+</body>
+</html>

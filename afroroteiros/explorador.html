@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>AfroRoteiros — Explorador</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #f2f2f2;
+    text-align: center;
+  }
+
+  .tela {
+    display: none;
+    padding: 60px 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .ativa {
+    display: block;
+  }
+
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+  }
+
+  button {
+    margin-top: 30px;
+    padding: 12px 26px;
+    font-size: 1em;
+    background: #f5c26b;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #e0ae55;
+  }
+
+  .pergunta {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+
+  .sub {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-top: 14px;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ================= MISSÃO 0 ================= -->
+
+<div class="tela ativa" id="m0-0">
+  <h1>Missão 0</h1>
+  <p>Antes do caminho</p>
+  <button onclick="next('m0-0','m0-1')">Começar</button>
+</div>
+
+<div class="tela" id="m0-1">
+  <p>
+    Você não está aqui para colecionar lugares.<br><br>
+    Está aqui para se deixar atravessar por eles.
+  </p>
+  <button onclick="next('m0-1','m0-2')">Continuar</button>
+</div>
+
+<div class="tela" id="m0-2">
+  <p>
+    Antes de olhar o mapa, olhe ao redor.<br><br>
+    Observe sons, movimentos, presenças.<br><br>
+    A cidade também te percebe.
+  </p>
+  <button onclick="next('m0-2','m0-3')">Estou pronto/a</button>
+</div>
+
+<div class="tela" id="m0-3">
+  <p>
+    Explorar é um gesto de atenção.<br><br>
+    Caminhar também é escutar.
+  </p>
+  <button onclick="next('m0-3','m0-4')">Ativar escuta</button>
+</div>
+
+<div class="tela" id="m0-4">
+  <p class="pergunta">
+    Quem passou por aqui antes de você?
+  </p>
+  <p class="sub">
+    Algumas perguntas não pedem resposta imediata.
+  </p>
+  <button onclick="concluirMissao0()">Abrir o caminho</button>
+</div>
+
+<!-- ================= MISSÃO 1 ================= -->
+
+<div class="tela" id="m1-0">
+  <h2>Missão 1</h2>
+  <p>O primeiro território</p>
+  <button onclick="next('m1-0','m1-1')">Iniciar</button>
+</div>
+
+<div class="tela" id="m1-1">
+  <p>
+    Escolha um lugar próximo de você.<br><br>
+    Não precisa ser importante.<br>
+    Apenas acessível agora.
+  </p>
+  <button onclick="next('m1-1','m1-2')">Escolhi um lugar</button>
+</div>
+
+<div class="tela" id="m1-2">
+  <p>
+    Chegue ao local com calma.<br><br>
+    Não leia nada ainda.<br>
+    Apenas observe o espaço.
+  </p>
+  <button onclick="next('m1-2','m1-3')">Estou no lugar</button>
+</div>
+
+<div class="tela" id="m1-3">
+  <p>
+    Observe:<br><br>
+    • Quem circula por aqui?<br>
+    • O que permanece?<br>
+    • O que parece ter sido esquecido?
+  </p>
+  <button onclick="next('m1-3','m1-4')">Continuar</button>
+</div>
+
+<div class="tela" id="m1-4">
+  <p class="pergunta">
+    Este lugar conta quais histórias?
+  </p>
+  <p class="sub">
+    E para quem elas foram contadas?
+  </p>
+  <button onclick="concluirMissao1()">O caminho está aberto</button>
+</div>
+
+<!-- ================= ACESSO AO MAPA ================= -->
+
+<div class="tela" id="mapa">
+  <h2>O caminho está aberto</h2>
+
+  <p>
+    Agora você pode acessar o mapa<br>
+    e escutar as histórias do território.
+  </p>
+
+  <p class="sub">
+    Não percorra tudo.<br>
+    Escolha um ponto.<br>
+    E permaneça um pouco.
+  </p>
+
+  <button onclick="abrirMapa()">Acessar o mapa</button>
+</div>
+
+<script>
+function next(atual, proxima) {
+  document.getElementById(atual).classList.remove("ativa");
+  document.getElementById(proxima).classList.add("ativa");
+}
+
+function concluirMissao0() {
+  localStorage.setItem("missao0", "concluida");
+  next('m0-4','m1-0');
+}
+
+function concluirMissao1() {
+  localStorage.setItem("missao1", "concluida");
+  next('m1-4','mapa');
+}
+
+function abrirMapa() {
+  localStorage.setItem("mapaLiberado", "true");
+  window.location.href = "Afro Roteiros Mapa Campos dos Goytacazes.html";
+}
+</script>
+
+</body>
+</html>

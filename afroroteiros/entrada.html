@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>AfroRoteiros — Entradas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --preto: #0f0f0f;
+  --verde: #3E4A1F;
+  --laranja: #E87722;
+  --cinza: #f5f5f3;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cinza);
+}
+
+header {
+  padding: 60px 30px 30px;
+  text-align: center;
+}
+
+header img {
+  max-width: 220px;
+  margin-bottom: 24px;
+}
+
+header p {
+  font-size: 1.2em;
+  line-height: 1.15;
+  max-width: 720px;
+  margin: auto;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 50px 40px 80px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 28px 24px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-weight: normal;
+  color: var(--verde);
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.15;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  border: none;
+  background: var(--laranja);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="colorido horizontal.png" alt="AfroRoteiros">
+  <p>
+    O AfroRoteiros é uma plataforma educativa
+    baseada em território, memória e experiência.
+    <br>
+    Como você deseja entrar hoje?
+  </p>
+</header>
+
+<section class="main">
+
+  <!-- EDUCADOR -->
+  <div class="card">
+    <h3>🎓 Educador/a</h3>
+    <p>
+      Para quem ensina, media e constrói
+      experiências educativas a partir do território.
+    </p>
+    <button onclick="entrar('educador.html', 'educador')">
+      Entrar como Educador/a
+    </button>
+  </div>
+
+  <!-- EXPLORADOR -->
+  <div class="card">
+    <h3>🌍 Explorador/a</h3>
+    <p>
+      Para quem quer descobrir histórias,
+      percorrer mapas e aprender jogando.
+    </p>
+    <button onclick="entrar('explorador.html', 'explorador')">
+      Entrar como Explorador/a
+    </button>
+  </div>
+
+  <!-- TURISTA -->
+  <div class="card">
+    <h3>🧳 Turista</h3>
+    <p>
+      Para quem deseja conhecer o território
+      de forma direta, sensorial e cultural.
+    </p>
+    <button onclick="entrar('turista.html', 'turista')">
+      Entrar como Turista
+    </button>
+  </div>
+
+  <!-- PESQUISADOR -->
+  <div class="card">
+    <h3>🔍 Pesquisador/a</h3>
+    <p>
+      Para quem investiga dados,
+      narrativas, memória e território.
+    </p>
+    <button onclick="entrar('pesquisador.html', 'pesquisador')">
+      Entrar como Pesquisador/a
+    </button>
+  </div>
+
+</section>
+
+<script>
+function entrar(arquivo, perfil) {
+  localStorage.setItem('perfil_afroroteiros', perfil);
+  window.location.href = arquivo;
+}
+</script>
+
+</body>
+</html>
