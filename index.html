@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Ìmó — Plataforma de Educação Antirracista</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --preto: #111111;
+  --cinza: #f4f4f2;
+  --verde: #3E4A1F;
+  --laranja: #E87722;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cinza);
+  color: var(--preto);
+  line-height: 1.6;
+}
+
+header {
+  padding: 80px 20px 60px;
+  text-align: center;
+  background: white;
+}
+
+header h1 {
+  font-size: 3em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+header span {
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  color: var(--verde);
+}
+
+header p {
+  max-width: 780px;
+  margin: 30px auto 0;
+  font-size: 1.15em;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+h2 {
+  font-weight: normal;
+  color: var(--verde);
+  margin-bottom: 26px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 34px;
+  border-radius: 18px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.highlight {
+  background: var(--verde);
+  color: white;
+  padding: 80px 20px;
+}
+
+.highlight p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.15em;
+}
+
+button {
+  margin-top: 26px;
+  padding: 14px 28px;
+  font-size: 1em;
+  border: none;
+  background: var(--laranja);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.85em;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <!-- Logo temporária do Ìmó entra aqui -->
+  <h1>Ìmó</h1>
+  <span>PLATAFORMA DE EDUCAÇÃO ANTIRRACISTA</span>
+
+  <p>
+    Ìmó é uma plataforma educacional dedicada ao letramento racial,
+    à educação antirracista e à leitura crítica do território.
+    <br><br>
+    Aqui, conhecimento não é apenas conteúdo —  
+    é experiência, método e prática.
+  </p>
+</header>
+
+<section>
+  <h2>O que é a plataforma Ìmó</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🧠 Educação aplicada</h3>
+      <p>
+        A Ìmó conecta teoria e prática por meio de
+        experiências educativas que dialogam com o mundo real.
+      </p>
+    </div>
+    <div class="card">
+      <h3>🌍 Território como sala de aula</h3>
+      <p>
+        A cidade, a memória e os espaços vividos
+        são entendidos como dispositivos educativos.
+      </p>
+    </div>
+    <div class="card">
+      <h3>📦 Infoprodutos educativos</h3>
+      <p>
+        A plataforma abriga infoprodutos que podem ser utilizados
+        por escolas, educadores, projetos culturais e público geral.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="highlight">
+  <h2 style="color:white">Infoprodutos da plataforma Ìmó</h2>
+  <p>
+    A Ìmó organiza e disponibiliza infoprodutos educacionais
+    que atuam como mediadores entre conhecimento,
+    território e experiência.
+  </p>
+</section>
+
+<section>
+  <h2>AfroRoteiros</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🧭 Experiência territorial</h3>
+      <p>
+        AfroRoteiros é um infoproduto da plataforma Ìmó
+        que utiliza mapas, jogo e narrativa para promover
+        educação antirracista a partir do território.
+      </p>
+      <p>
+        Ele pode ser utilizado em contextos educativos,
+        culturais e turísticos.
+      </p>
+      <button onclick="acessarAfroRoteiros()">Acessar AfroRoteiros</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Ìmó · Plataforma de Educação Antirracista<br>
+  AfroRoteiros é um infoproduto da Ìmó
+</footer>
+
+<script>
+function acessarAfroRoteiros() {
+  window.location.href = "entrada.html";
+}
+</script>
+
+</body>
+</html>
